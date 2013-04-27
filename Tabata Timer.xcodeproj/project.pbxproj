@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D83EE8B172C7ADE00674752 /* tabatatimericon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D83EE8A172C7ADE00674752 /* tabatatimericon.png */; };
 		C9CDF63616B4C766008C6499 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CDF63516B4C766008C6499 /* UIKit.framework */; };
 		C9CDF63816B4C766008C6499 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CDF63716B4C766008C6499 /* Foundation.framework */; };
 		C9CDF63A16B4C766008C6499 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CDF63916B4C766008C6499 /* CoreGraphics.framework */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D83EE8A172C7ADE00674752 /* tabatatimericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabatatimericon.png; path = "Tabata Timer/tabatatimericon.png"; sourceTree = "<group>"; };
 		C9CDF63116B4C766008C6499 /* Tabata Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tabata Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CDF63516B4C766008C6499 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9CDF63716B4C766008C6499 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D83EE89172C77C400674752 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1D83EE8A172C7ADE00674752 /* tabatatimericon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		C9CDF62616B4C766008C6499 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 				C9CDF66216B4C767008C6499 /* Tabata TimerTests */,
 				C9CDF63416B4C766008C6499 /* Frameworks */,
 				C9CDF63216B4C766008C6499 /* Products */,
+				1D83EE89172C77C400674752 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +252,7 @@
 				C9CDF64C16B4C767008C6499 /* Default-568h@2x.png in Resources */,
 				C9CDF64F16B4C767008C6499 /* MainStoryboard_iPhone.storyboard in Resources */,
 				C9CDF65216B4C767008C6499 /* MainStoryboard_iPad.storyboard in Resources */,
+				1D83EE8B172C7ADE00674752 /* tabatatimericon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +474,7 @@
 				C9CDF66F16B4C767008C6499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9CDF67016B4C767008C6499 /* Build configuration list for PBXNativeTarget "Tabata TimerTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +483,7 @@
 				C9CDF67216B4C767008C6499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
