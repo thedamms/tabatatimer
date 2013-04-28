@@ -26,11 +26,18 @@ int timevalue;
     if (timevalue > 0) {
         timevalue -= 1;
     }
+    else {
+        [self.timer invalidate];
+    }
     self.timeLabel.text = [NSString stringWithFormat:@"%d",timevalue];
 }
 
 - (IBAction)startStopButtonClicked:(id)sender {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerTicked:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                  target:self
+                                                selector:@selector(timerTicked:)
+                                                userInfo:nil
+                                                 repeats:YES];
 }
 
 - (IBAction)resetButtonClicked:(id)sender {
