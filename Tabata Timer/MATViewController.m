@@ -1,53 +1,42 @@
 
 #import "MATViewController.h"
+#import "MATWork.h"
 
 @interface MATViewController ()
-@property (nonatomic, strong) NSTimer *timer;
 
-- (void)timerTicked:(NSTimer*)timer;
-- (void)resetTime;
+@property (nonatomic) MATWork *work;
+
 @end
 
 @implementation MATViewController
 
-int timevalue;
-
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self resetTime];
+    
+    if (self.work) {
+        [self.work reset];
+    }
+    else {
+        self.work = [[MATWork alloc] initWithViewController:self];
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
-    [self.timer invalidate];
-    [super viewDidDisappear:animated];
-}
-
-- (void)timerTicked:(NSTimer*)timer {
-    if (timevalue > 0) {
-        timevalue -= 1;
+    if (self.work) {
+        [self.work reset];
     }
-    else {
-        [self.timer invalidate];
-    }
-    self.timeLabel.text = [NSString stringWithFormat:@"%d",timevalue];
 }
 
 - (IBAction)startStopButtonClicked:(id)sender {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                                  target:self
-                                                selector:@selector(timerTicked:)
-                                                userInfo:nil
-                                                 repeats:YES];
+    if (self.work) {
+        [self.work start];
+    }
 }
 
 - (IBAction)resetButtonClicked:(id)sender {
-    [self.timer invalidate];
-    [self resetTime];
-}
-
-- (void)resetTime {
-    timevalue = 30;
-    self.timeLabel.text = [NSString stringWithFormat:@"%d",timevalue];
+    if (self.work) {
+        [self.work reset];
+    }
 }
 
 @end
