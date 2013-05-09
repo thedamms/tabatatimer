@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D45A1EE172DEDD800A5630C /* MATWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D45A1ED172DEDD800A5630C /* MATWork.m */; };
 		1D83EE8B172C7ADE00674752 /* tabatatimericon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1D83EE8A172C7ADE00674752 /* tabatatimericon.png */; };
 		C9CDF63616B4C766008C6499 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CDF63516B4C766008C6499 /* UIKit.framework */; };
 		C9CDF63816B4C766008C6499 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CDF63716B4C766008C6499 /* Foundation.framework */; };
@@ -39,8 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1D45A1EC172DEDD800A5630C /* MATWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MATWork.h; sourceTree = "<group>"; };
-		1D45A1ED172DEDD800A5630C /* MATWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MATWork.m; sourceTree = "<group>"; };
 		1D83EE8A172C7ADE00674752 /* tabatatimericon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabatatimericon.png; path = "Tabata Timer/tabatatimericon.png"; sourceTree = "<group>"; };
 		C9CDF63116B4C766008C6499 /* Tabata Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tabata Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CDF63516B4C766008C6499 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -139,8 +136,6 @@
 				C9CDF65016B4C767008C6499 /* MainStoryboard_iPad.storyboard */,
 				C9CDF65316B4C767008C6499 /* MATViewController.h */,
 				C9CDF65416B4C767008C6499 /* MATViewController.m */,
-				1D45A1EC172DEDD800A5630C /* MATWork.h */,
-				1D45A1ED172DEDD800A5630C /* MATWork.m */,
 				C9CDF63C16B4C766008C6499 /* Supporting Files */,
 			);
 			path = "Tabata Timer";
@@ -295,7 +290,6 @@
 				C9CDF64216B4C766008C6499 /* main.m in Sources */,
 				C9CDF64616B4C767008C6499 /* MATAppDelegate.m in Sources */,
 				C9CDF65516B4C767008C6499 /* MATViewController.m in Sources */,
-				1D45A1EE172DEDD800A5630C /* MATWork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
