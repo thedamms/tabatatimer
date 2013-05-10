@@ -1,4 +1,5 @@
 
+#import <QuartzCore/QuartzCore.h>
 #import "MATViewController.h"
 
 @interface MATViewController ()
@@ -21,6 +22,7 @@ int rounds = 2;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self.headerLabel.layer setCornerRadius:10];
     self.currentRound = 1;
     [self reset];
 }

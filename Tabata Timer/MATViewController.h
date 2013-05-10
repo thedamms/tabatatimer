@@ -9,6 +9,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *startStopButton;
 @property (weak, nonatomic) IBOutlet UIButton *resetButton;
 @property (weak, nonatomic) IBOutlet UILabel *finishedLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 
 - (IBAction)startStopButtonClicked:(id)sender;
 - (IBAction)resetButtonClicked:(id)sender;
