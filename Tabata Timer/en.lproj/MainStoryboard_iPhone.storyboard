@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -64,10 +64,18 @@
                                     <action selector="resetButtonClicked:" destination="2" eventType="touchUpInside" id="apq-Zm-G4b"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ASi-en-blL">
+                                <rect key="frame" x="51" y="308" width="202" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="finishedLabel" destination="ASi-en-blL" id="dfl-VF-02y"/>
                         <outlet property="numberOfRoundsLabel" destination="HpS-gl-JIH" id="XNr-i4-aSA"/>
                         <outlet property="resetButton" destination="PX3-7Z-VCq" id="AWL-8L-I5o"/>
                         <outlet property="startStopButton" destination="lBg-dA-ktr" id="sje-LB-tjr"/>
@@ -86,6 +94,7 @@
             <relationships>
                 <relationship kind="action" name="resetButtonClicked:"/>
                 <relationship kind="action" name="startStopButtonClicked:"/>
+                <relationship kind="outlet" name="finishedLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="numberOfRoundsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="resetButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="startStopButton" candidateClass="UIButton"/>
