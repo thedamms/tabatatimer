@@ -16,9 +16,9 @@
 
 @implementation MATViewController
 
-int workTime = 2;
-int restTime = 2;
-int rounds = 2;
+int workTime = 20;
+int restTime = 10;
+int rounds = 8;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
