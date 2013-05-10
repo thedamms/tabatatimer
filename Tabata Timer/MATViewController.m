@@ -1,5 +1,6 @@
 
 #import <QuartzCore/QuartzCore.h>
+#import <AudioToolbox/AudioServices.h>
 #import "MATViewController.h"
 
 @interface MATViewController ()
@@ -11,6 +12,8 @@
 @property (nonatomic) BOOL working;
 @property (nonatomic) BOOL resting;
 @property (nonatomic) int currentRound;
+@property (nonatomic) SystemSoundID workFinishedBeep;
+@property (nonatomic) SystemSoundID restFinishedBeep;
 
 @end
 
@@ -22,6 +25,8 @@ int rounds = 8;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    [self setupSound];
     [self.headerLabel.layer setCornerRadius:10];
     self.currentRound = 1;
     [self reset];
@@ -84,6 +89,7 @@ int rounds = 8;
         self.timeLabel.text = [NSString stringWithFormat:@"%d",self.remainingWorkTime];
     }
     else {
+        [self workBeep];
         [self rest];
     }
 }
@@ -101,10 +107,39 @@ int rounds = 8;
             [self reset];
         }
         else {
+            [self restBeep];
             [self reset];
             [self start];
         }
     }
+}
+
+- (void)workBeep {
+    AudioServicesPlaySystemSound(self.workFinishedBeep);
+}
+
+- (void)restBeep {
+    AudioServicesPlaySystemSound(self.restFinishedBeep);
+}
+
+- (void)setupSound {
+    CFBundleRef mainBundle = CFBundleGetMainBundle ();
+    
+    CFURLRef beep1FileURLRef  = CFBundleCopyResourceURL (
+                                                         mainBundle,
+                                                         CFSTR ("beep-1"),
+                                                         CFSTR ("wav"),
+                                                         NULL
+                                                         );
+    CFURLRef beep2FileURLRef  = CFBundleCopyResourceURL (
+                                                         mainBundle,
+                                                         CFSTR ("beep-2"),
+                                                         CFSTR ("wav"),
+                                                         NULL
+                                                         );
+    
+    AudioServicesCreateSystemSoundID(beep1FileURLRef,&_workFinishedBeep);
+    AudioServicesCreateSystemSoundID(beep2FileURLRef,&_restFinishedBeep);
 }
 
 @end
