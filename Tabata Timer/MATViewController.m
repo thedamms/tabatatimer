@@ -37,6 +37,7 @@ int rounds = 8;
 
 - (IBAction)resetButtonClicked:(id)sender {
     self.finishedLabel.text = @"";
+    self.currentRound = 1;
     [self reset];
 }
 
