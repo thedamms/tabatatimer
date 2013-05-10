@@ -63,7 +63,7 @@ int rounds = 8;
         [self.startStopButton setTitle:@"Running" forState:UIControlStateDisabled];
         [self.restTimer invalidate];
         self.workTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(workTimerTicked:) userInfo:nil repeats:YES];
-    }   
+    }
 }
 
 - (void)stop {
